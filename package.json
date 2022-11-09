@@ -1,0 +1,25 @@
+{
+	"name": "gulp-mirets",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "gulp",
+		"build": "gulp build --build"
+	},
+	"keywords": [],
+	"author": "Ruslan Mirets",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.27.10",
+		"del": "^7.0.0",
+		"gulp": "^4.0.2",
+		"gulp-file-include": "^2.3.0",
+		"gulp-if": "^3.0.0",
+		"gulp-notify": "^4.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-typograf": "^4.0.3",
+		"gulp-version-number": "^0.2.4"
+	}
+}
