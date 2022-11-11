@@ -21,16 +21,19 @@ import { html } from "./gulp/tasks/html.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { images } from "./gulp/tasks/images.js";
 import { webp } from "./gulp/tasks/webp.js";
+import { js } from "./gulp/tasks/js.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
 	gulp.watch(path.watch.html, html);
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.images, images);
+	gulp.watch(path.watch.webpImages, webp);
+	gulp.watch(path.watch.js, js);
 }
 
 // Основные задачи
-const mainTasks = gulp.parallel(html, scss, images, webp);
+const mainTasks = gulp.parallel(html, scss, images, webp, js);
 
 // Построение сценариев выполнение задач
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
