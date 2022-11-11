@@ -2,3 +2,8 @@
 @import "./mixins";
 @import "./fonts";
 @import "./global";
+
+svg path {
+	fill: red;
+	stroke: inherit;
+}

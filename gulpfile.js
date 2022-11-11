@@ -23,6 +23,7 @@ import { images } from "./gulp/tasks/images.js";
 import { webp } from "./gulp/tasks/webp.js";
 import { js } from "./gulp/tasks/js.js";
 import { fonts } from "./gulp/tasks/fonts.js";
+import { svgSprites } from "./gulp/tasks/svgSprites.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -35,7 +36,15 @@ function watcher() {
 }
 
 // Основные задачи
-const mainTasks = gulp.parallel(html, scss, images, webp, js, fonts);
+const mainTasks = gulp.parallel(
+	html,
+	scss,
+	images,
+	webp,
+	js,
+	fonts,
+	svgSprites
+);
 
 // Построение сценариев выполнение задач
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));

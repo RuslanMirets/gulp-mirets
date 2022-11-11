@@ -20,6 +20,7 @@ export const path = {
 		webpImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
 		js: `${srcFolder}/js/main.js`,
 		fonts: `${srcFolder}/fonts/*.woff2`,
+		svgicons: `${srcFolder}/img/svg/*.svg`,
 	},
 	watch: {
 		html: `${srcFolder}/**/*.html`,
