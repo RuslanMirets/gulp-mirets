@@ -1,0 +1,38 @@
+{
+	"svguse": {
+		"scope": "html",
+		"prefix": "g-use",
+		"body": [
+			"<svg class=\"\">",
+			"  <use xlink:href=\"img/sprite.svg#$2\"></use>",
+			"</svg>"
+		],
+		"description": "Snippet for use svg sprites"
+	},
+	"burger": {
+		"scope": "html",
+		"prefix": "g-burger",
+		"body": [
+			"<button class=\"burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
+			"  <span class=\"burger__line\"></span>",
+			"</button>"
+		],
+		"description": "Snippet for burger btn"
+	},
+	"picture": {
+		"prefix": "g-picture",
+		"body": [
+			"<picture>",
+			"  <source srcset=\"$1\" type=\"image/webp\">",
+			"  <img class=\"image\" loading=\"lazy\" src=\"$1\" alt=\"$2\">",
+			"</picture>"
+		],
+		"description": "Snippet for basic logo structure"
+	},
+	"svgimg": {
+		"scope": "html",
+		"prefix": "g-svgimg",
+		"body": ["<img class=\"image\" loading=\"lazy\" src=\"$1.$2\" alt=\"$3\">"],
+		"description": "Snippet for simple html svg images"
+	}
+}

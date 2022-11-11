@@ -1,15 +1,2 @@
 body {
-	background-color: rgb(56, 56, 56);
-
-	@media (max-width: 767px) {
-		background-color: #fff;
-	}
-
-	p {
-		color: #fff;
-
-		@media (max-width: 767px) {
-			color: red;
-		}
-	}
 }

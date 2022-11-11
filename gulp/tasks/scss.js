@@ -4,6 +4,7 @@ import groupCssMediaQueries from "gulp-group-css-media-queries";
 import autoprefixer from "gulp-autoprefixer";
 import cleanCss from "gulp-clean-css";
 import rename from "gulp-rename";
+import webpCss from "gulp-webpcss";
 
 const mainSass = gulpSass(sass);
 
@@ -20,6 +21,8 @@ export const scss = () => {
 				)
 			)
 			.pipe(mainSass())
+			.pipe(app.plugins.replace(/@img\//g, "../img/"))
+			.pipe(webpCss({ webpClass: ".webp", noWebpClass: ".no-webp" }))
 			.pipe(groupCssMediaQueries())
 			.pipe(
 				autoprefixer({

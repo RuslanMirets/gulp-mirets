@@ -14,6 +14,7 @@ export const html = () => {
 			)
 		)
 		.pipe(fileInclude())
+		.pipe(app.plugins.replace(/@img\//g, "img/"))
 		.pipe(
 			typograf({
 				locale: ["ru", "en-US"],
