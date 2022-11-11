@@ -1,6 +1,6 @@
-import fileInclude from 'gulp-file-include';
-import typograf from 'gulp-typograf';
-import versionNumber from 'gulp-version-number';
+import fileInclude from "gulp-file-include";
+import typograf from "gulp-typograf";
+import versionNumber from "gulp-version-number";
 
 export const html = () => {
 	return app.gulp
@@ -8,28 +8,28 @@ export const html = () => {
 		.pipe(
 			app.plugins.plumber(
 				app.plugins.notify.onError({
-					title: 'HTML',
-					message: 'Error: <%= error.message %>',
-				}),
-			),
+					title: "HTML",
+					message: "Error: <%= error.message %>",
+				})
+			)
 		)
 		.pipe(fileInclude())
 		.pipe(
 			typograf({
-				locale: ['ru', 'en-US'],
-			}),
+				locale: ["ru", "en-US"],
+			})
 		)
 		.pipe(
 			app.plugins.if(
 				app.isBuild,
 				versionNumber({
-					value: '%DT%',
-					append: { key: '_v', cover: 0, to: ['css', 'js'] },
+					value: "%DT%",
+					append: { key: "_v", cover: 0, to: ["css", "js"] },
 					output: {
-						file: 'gulp/version.json',
+						file: "gulp/version.json",
 					},
-				}),
-			),
+				})
+			)
 		)
 		.pipe(app.gulp.dest(app.path.build.html))
 		.pipe(app.plugins.browserSync.stream());

@@ -1,31 +1,33 @@
 // Основной модуль
-import gulp from 'gulp';
+import gulp from "gulp";
 // Импорт путей
-import { path } from './gulp/config/path.js';
+import { path } from "./gulp/config/path.js";
 // Импорт общих плагинов
-import { plugins } from './gulp/config/plugins.js';
+import { plugins } from "./gulp/config/plugins.js";
 
 // Передаем значения в глобальную переменную
 global.app = {
-	isBuild: process.argv.includes('--build'),
-	isDev: !process.argv.includes('--build'),
+	isBuild: process.argv.includes("--build"),
+	isDev: !process.argv.includes("--build"),
 	path: path,
 	gulp: gulp,
 	plugins: plugins,
 };
 
 // Импорт задач
-import { clean } from './gulp/tasks/clean.js';
-import { server } from './gulp/tasks/server.js';
-import { html } from './gulp/tasks/html.js';
+import { clean } from "./gulp/tasks/clean.js";
+import { server } from "./gulp/tasks/server.js";
+import { html } from "./gulp/tasks/html.js";
+import { scss } from "./gulp/tasks/scss.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
 	gulp.watch(path.watch.html, html);
+	gulp.watch(path.watch.scss, scss);
 }
 
 // Основные задачи
-const mainTasks = gulp.parallel(html);
+const mainTasks = gulp.parallel(html, scss);
 
 // Построение сценариев выполнение задач
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
@@ -36,4 +38,4 @@ export { dev };
 export { build };
 
 // Выполнения сценария по умолчанию
-gulp.task('default', dev);
+gulp.task("default", dev);
