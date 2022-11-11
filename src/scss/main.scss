@@ -3,7 +3,11 @@
 @import "./fonts";
 @import "./global";
 
-svg path {
-	fill: red;
-	stroke: inherit;
+@import "./components/header";
+
+// тестовые стили, удалите их
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

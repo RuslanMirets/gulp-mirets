@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="page">
 	@@include('./components/page-blocks/head.html', {"title": "Главная"})
-	<body>
+	<body class="page__body">
 		<div class="site-container">
 			@@include('./components/page-blocks/header.html')
-			<main>
-				<p>
-					Далеко-далеко за словесными горами в стране гласных и согласных живут,
-					рыбные тексты. Собрал коварный по всей единственное запятых даже
-					ручеек продолжил языком безопасную подзаголовок страну раз наш lorem
-					прямо диких, все родного. Маленький.
-				</p>
-				<div>
-					<svg height="100" width="100">
-						<use xlink:href="img/sprite.svg#next"></use>
-					</svg>
-					<svg class="">
-						<use xlink:href="img/sprite.svg#next"></use>
-					</svg>
-					<svg class="">
-						<use xlink:href="img/sprite.svg#prev"></use>
-					</svg>
-				</div>
-				<div>
-					<svg class="">
-						<use xlink:href="img/sprite.svg#benefits-01"></use>
-					</svg>
-					<svg class="">
-						<use xlink:href="img/sprite.svg#benefits-02"></use>
-					</svg>
-					<svg class="">
-						<use xlink:href="img/sprite.svg#benefits-03"></use>
-					</svg>
-				</div>
+			<main class="main">
+				<picture>
+					<source srcset="@img/test.webp" type="image/webp" />
+					<img
+						class="image"
+						loading="lazy"
+						src="@img/test.jpg"
+						width="500"
+						alt=""
+					/>
+				</picture>
 			</main>
 			@@include('./components/page-blocks/footer.html')
 		</div>
