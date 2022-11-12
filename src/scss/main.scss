@@ -1,11 +1,13 @@
+// Базовые подключения
 @import "./vars";
 @import "./mixins";
 @import "./fonts";
 @import "./global";
 
+// Подключение компонентов страницы
 @import "./components/header";
 
-// тестовые стили, удалите их
+// Тестовые стили
 .main {
 	display: flex;
 	align-items: center;
