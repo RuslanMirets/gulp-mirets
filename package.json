@@ -37,5 +37,8 @@
 		"webp-converter": "^2.2.3",
 		"webpack": "^5.75.0",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"normalize.css": "^8.0.1"
 	}
 }
