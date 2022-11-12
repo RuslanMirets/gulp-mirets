@@ -5,8 +5,6 @@ html {
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
 	box-sizing: inherit;
 }
 
@@ -17,8 +15,10 @@ html {
 }
 
 .page__body {
+	margin: 0;
 	min-width: 320px;
 	min-height: 100%;
+	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
 }
@@ -30,11 +30,6 @@ img {
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
-}
-
-a:hover {
 	text-decoration: none;
 	color: inherit;
 }
