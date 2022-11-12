@@ -12,6 +12,8 @@ export const path = {
 		images: `${buildFolder}/img/`,
 		js: `${buildFolder}/js/`,
 		fonts: `${buildFolder}/fonts/`,
+		favicon: `${buildFolder}/img/favicon/`,
+		root: `${buildFolder}/`,
 	},
 	src: {
 		html: `${srcFolder}/*.html`,
@@ -21,6 +23,7 @@ export const path = {
 		js: `${srcFolder}/js/main.js`,
 		fonts: `${srcFolder}/fonts/*.woff2`,
 		svgicons: `${srcFolder}/img/svg/*.svg`,
+		favicon: `${srcFolder}/img/favicon/favicon.svg`,
 	},
 	watch: {
 		html: `${srcFolder}/**/*.html`,
@@ -29,6 +32,7 @@ export const path = {
 		webpImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
 		js: `${srcFolder}/js/**/*.js`,
 		fonts: `${srcFolder}/fonts/*.woff2`,
+		favicon: `${srcFolder}/img/favicon/favicon.svg`,
 	},
 	clean: buildFolder,
 	buildFolder: buildFolder,

@@ -24,6 +24,7 @@ import { webp } from "./gulp/tasks/webp.js";
 import { js } from "./gulp/tasks/js.js";
 import { fonts } from "./gulp/tasks/fonts.js";
 import { svgSprites } from "./gulp/tasks/svgSprites.js";
+import { favicon } from "./gulp/tasks/favicon.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
@@ -33,6 +34,7 @@ function watcher() {
 	gulp.watch(path.watch.webpImages, webp);
 	gulp.watch(path.watch.js, js);
 	gulp.watch(path.watch.fonts, fonts);
+	gulp.watch(path.watch.favicon, favicon);
 }
 
 // Основные задачи
@@ -43,7 +45,8 @@ const mainTasks = gulp.parallel(
 	webp,
 	js,
 	fonts,
-	svgSprites
+	svgSprites,
+	favicon
 );
 
 // Построение сценариев выполнение задач
