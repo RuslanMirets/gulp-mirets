@@ -24,7 +24,7 @@
 		"body": [
 			"<picture>",
 			"  <source srcset=\"$1\" type=\"image/webp\">",
-			"  <img class=\"image\" loading=\"lazy\" src=\"$1\" alt=\"$2\">",
+			"  <img src=\"$1\" loading=\"lazy\" alt=\"$2\">",
 			"</picture>"
 		],
 		"description": "Snippet for basic logo structure"

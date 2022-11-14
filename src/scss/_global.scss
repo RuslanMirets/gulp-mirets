@@ -1,11 +1,48 @@
-html {
-	box-sizing: border-box;
-}
-
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+	list-style: none;
+	padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
 }
 
 .page {
@@ -15,27 +52,11 @@ html {
 }
 
 .page__body {
-	margin: 0;
 	min-width: 320px;
 	min-height: 100%;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
-}
-
-img {
-	height: auto;
-	max-width: 100%;
-	object-fit: cover;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-ul {
-	list-style: none;
 }
 
 .btn-reset {
