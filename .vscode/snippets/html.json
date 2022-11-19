@@ -32,7 +32,7 @@
 	"svgimg": {
 		"scope": "html",
 		"prefix": "g-svgimg",
-		"body": ["<img class=\"image\" loading=\"lazy\" src=\"$1.$2\" alt=\"$3\">"],
+		"body": ["<img loading=\"lazy\" src=\"$1\" alt=\"$2\">"],
 		"description": "Snippet for simple html svg images"
 	},
 	"navigation": {
