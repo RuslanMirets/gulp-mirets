@@ -13,7 +13,7 @@
 		"scope": "html",
 		"prefix": "g-burger",
 		"body": [
-			"<button class=\"burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
+			"<button class=\"header__burger burger\" aria-label=\"Открыть меню\" aria-expanded=\"false\"  data-burger>",
 			"  <span class=\"burger__line\"></span>",
 			"</button>"
 		],
@@ -32,7 +32,7 @@
 	"svgimg": {
 		"scope": "html",
 		"prefix": "g-svgimg",
-		"body": ["<img src=\"$1\" loading=\"lazy\" alt=\"$2\">"],
+		"body": ["<img loading=\"lazy\" src=\"$1\" alt=\"$2\">"],
 		"description": "Snippet for simple html svg images"
 	},
 	"navigation": {
