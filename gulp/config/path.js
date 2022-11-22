@@ -16,7 +16,9 @@ export const path = {
 		root: `${buildFolder}/`,
 	},
 	src: {
-		html: `${srcFolder}/*.html`,
+		// Раскомментировать, если нужно использовать html
+		// html: `${srcFolder}/*.html`,
+		pug: `${srcFolder}/pug/pages/*.pug`,
 		scss: `${srcFolder}/scss/*.scss`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
 		webpImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
@@ -26,7 +28,9 @@ export const path = {
 		favicon: `${srcFolder}/img/favicon/favicon.svg`,
 	},
 	watch: {
-		html: `${srcFolder}/**/*.html`,
+		// Раскомментировать, если нужно использовать html
+		// html: `${srcFolder}/**/*.html`,
+		pug: `${srcFolder}/**/*.pug`,
 		scss: `${srcFolder}/scss/**/*.scss`,
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}`,
 		webpImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
