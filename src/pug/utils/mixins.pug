@@ -9,3 +9,7 @@ mixin burger
 		data-burger
 	)
 		span.burger__line
+
+mixin navItem(title, href)
+	li.nav__item&attributes(attributes)
+		a.nav__link(href=href) #{ title }

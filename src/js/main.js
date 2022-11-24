@@ -1,3 +1,1 @@
-import * as functions from "./modules/functions.js";
-
-functions.isWebp();
+import "./_functions.js";
