@@ -17,9 +17,9 @@ global.app = {
 // Импорт задач
 import { clean } from "./gulp/tasks/clean.js";
 import { server } from "./gulp/tasks/server.js";
-// Раскомментировать, если нужно использовать html
-// import { html } from "./gulp/tasks/html.js";
-import { pug } from "./gulp/tasks/pug.js";
+import { html } from "./gulp/tasks/html.js";
+// Раскомментировать, если нужно использовать pug
+// import { pug } from "./gulp/tasks/pug.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { images } from "./gulp/tasks/images.js";
 import { webp } from "./gulp/tasks/webp.js";
@@ -30,9 +30,9 @@ import { favicon } from "./gulp/tasks/favicon.js";
 
 // Наблюдатель за изменениями в файлах
 function watcher() {
-	// Раскомментировать, если нужно использовать html
-	// gulp.watch(path.watch.html, html);
-	gulp.watch(path.watch.pug, pug);
+	gulp.watch(path.watch.html, html);
+	// Раскомментировать, если нужно использовать pug
+	// gulp.watch(path.watch.pug, pug);
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.images, images);
 	gulp.watch(path.watch.webpImages, webp);
@@ -43,9 +43,9 @@ function watcher() {
 
 // Основные задачи
 const mainTasks = gulp.parallel(
+	html,
 	// Раскомментировать, если нужно использовать html
-	// html,
-	pug,
+	// pug,
 	scss,
 	images,
 	webp,
