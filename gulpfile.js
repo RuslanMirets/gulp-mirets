@@ -23,7 +23,8 @@ import { html } from "./gulp/tasks/html.js";
 import { scss } from "./gulp/tasks/scss.js";
 import { images } from "./gulp/tasks/images.js";
 import { webp } from "./gulp/tasks/webp.js";
-import { avif } from "./gulp/tasks/avif.js";
+// Раскомментировать, если нужно использовать формат изображения avif
+// import { avif } from "./gulp/tasks/avif.js";
 import { js } from "./gulp/tasks/js.js";
 import { fonts } from "./gulp/tasks/fonts.js";
 import { svgSprites } from "./gulp/tasks/svgSprites.js";
@@ -37,7 +38,8 @@ function watcher() {
 	gulp.watch(path.watch.scss, scss);
 	gulp.watch(path.watch.images, images);
 	gulp.watch(path.watch.webpImages, webp);
-	gulp.watch(path.watch.avifImages, avif);
+	// Раскомментировать, если нужно использовать формат изображения avif
+	// gulp.watch(path.watch.avifImages, avif);
 	gulp.watch(path.watch.js, js);
 	gulp.watch(path.watch.fonts, fonts);
 	gulp.watch(path.watch.favicon, favicon);
@@ -51,7 +53,8 @@ const mainTasks = gulp.parallel(
 	scss,
 	images,
 	webp,
-	avif,
+	// Раскомментировать, если нужно использовать формат изображения avif
+	// avif,
 	js,
 	fonts,
 	svgSprites,
