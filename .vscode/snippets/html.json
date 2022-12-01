@@ -23,7 +23,8 @@
 		"prefix": "g-picture",
 		"body": [
 			"<picture>",
-			"  <source srcset=\"$1\" type=\"image/webp\">",
+			"  <source srcset=\"$1.avif\" type=\"image/avif\">",
+			"  <source srcset=\"$1.webp\" type=\"image/webp\">",
 			"  <img src=\"$1\" loading=\"lazy\" alt=\"$2\">",
 			"</picture>"
 		],
