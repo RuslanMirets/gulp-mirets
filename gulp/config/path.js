@@ -23,7 +23,7 @@ export const path = {
 		images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
 		webpImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
 		avifImages: `${srcFolder}/img/**/*.{jpg,jpeg,png}`,
-		js: `${srcFolder}/js/main.js`,
+		js: `${srcFolder}/js/app.js`,
 		fonts: `${srcFolder}/fonts/*.woff2`,
 		svgicons: `${srcFolder}/img/svg/*.svg`,
 		favicon: `${srcFolder}/img/favicon/favicon.svg`,
